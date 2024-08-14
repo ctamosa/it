@@ -19,7 +19,7 @@ app.post('/register', (req, res) => {
   const { username, password } = req.body;
   const hashedPassword = bcrypt.hashSync(password, 8);
 
-  const sql = `INSERT INTO users (username, password) VALUES (?, ?)`;
+  const sql = `INSERT INTO faculty (username, password) VALUES (?, ?)`;
   db.query(sql, [username, hashedPassword], (err, result) => {
     if (err) throw err;
     res.send('User registered');

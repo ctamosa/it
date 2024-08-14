@@ -30,13 +30,16 @@ const express = require('express');
 const app = express();
 
 // Define the /users route
+// Define the /users route
 app.get('/users', (req, res) => {
-    db.query('SELECT * FROM users', (err, results) => {
-        if (err) {
-            return res.status(500).json({ error: 'Failed to fetch users' });
-        }
-        res.json(results);
-    });
+  console.log("GET /users route accessed"); // Debugging line
+  db.query('SELECT * FROM users', (err, results) => {
+      if (err) {
+          console.error("Error fetching users:", err); // Debugging line
+          return res.status(500).json({ error: 'Failed to fetch users' });
+      }
+      res.json(results);
+  });
 });
 
 // Define the root route

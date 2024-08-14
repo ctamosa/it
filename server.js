@@ -12,10 +12,10 @@ app.use(bodyParser.json());
 
 // Create a MySQL connection
 const db = mysql.createConnection({
-    host: 'your-database-host', // e.g., 'localhost' or the AWS RDS endpoint
-    user: 'your-database-username',
-    password: 'your-database-password',
-    database: 'your-database-name'
+    host: 'database-2.cvgio2aq09cd.ap-south-1.rds.amazonaws.com', // e.g., 'localhost' or the AWS RDS endpoint
+    user: 'admin',
+    password: 'Tamosa1985',
+    database: 'it-department'
 });
 
 // Connect to MySQL

@@ -26,6 +26,8 @@ db.connect((err) => {
     }
     console.log('Connected to database.');
 });
+const express = require('express');
+const app = express();
 
 // Define the /users route
 app.get('/users', (req, res) => {

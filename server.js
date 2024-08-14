@@ -28,6 +28,7 @@ db.connect((err) => {
 app.get('/users', (req, res) => {
   res.send('Users route is working!');
 });
+module.exports = router;
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
 

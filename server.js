@@ -15,7 +15,7 @@ const db = mysql.createConnection({
     host: 'database-2.cvgio2aq09cd.ap-south-1.rds.amazonaws.com', // e.g., 'localhost' or the AWS RDS endpoint
     user: 'admin',
     password: 'Tamosa1985',
-    database: 'it-department'
+    database: 'it_department'
 });
 
 // Connect to MySQL
@@ -78,6 +78,9 @@ app.post('/login', (req, res) => {
 
 // Start the server
 const port = process.env.PORT || 8080;
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+//app.listen(port, () => {
+//    console.log(`Server is running on port ${port}`);
+app.listen(8080, () => {
+  console.log('Server is running on port 8080');
 });
+
